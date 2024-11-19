@@ -10,7 +10,7 @@ export const getProducts = async (searchQuery) => {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
             }
         });
-        console.log(data);
+        // console.log(data);
         console.log("Raw HTML fetched successfully.");
 
         const $ = cheerio.load(data);
@@ -36,7 +36,7 @@ export const getProducts = async (searchQuery) => {
         return products;
 
     } catch (error) {
-        console.log('Error getting data:', error.message);
+        throw error
 
     }
 };
