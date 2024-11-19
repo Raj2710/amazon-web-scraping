@@ -18,8 +18,7 @@ const DataPage = () => {
         try {
 
             // const response = await axios.get(`http://localhost:8000/search?searchQuery=${searchQuery}`);
-            const response = await axios.get(`https://product-search-5vu4.onrender.com/search?searchQuery=${searchQuery}`);
-            console.log(response);
+            const response = await axios.get(`https://amazon-web-scraping-uwt6.onrender.com/search?searchQuery=${searchQuery}`);
             const result = response.data.products;
             console.log(result);
             setProducts(result && result.map((product, index) => ({ id: index + 1, sno: index + 1, ...product })));
